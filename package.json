@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/treehaus-space/jonas/drinks.git"
+    "url": "git+https://github.com/treehaus-space/drinks-ui.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/treehaus-space/jonas/drinks/issues"
+    "url": "https://github.com/treehaus-space/drinks-ui/issues"
   },
-  "homepage": "https://gitlab.com/treehaus-space/jonas/drinks#readme",
+  "homepage": "https://github.com/treehaus-space/drinks-ui",
   "devDependencies": {
     "@types/lodash": "^4.14.159",
     "@types/luxon": "^1.24.3",
