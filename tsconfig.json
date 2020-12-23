@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "./built",
+    "allowJs": true,
+    "target": "esnext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "baseUrl": ".",
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["./app/static/**/*"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,109 @@
+main,
+header,
+section,
+aside,
+footer {
+  display: block;
+  margin: 3px;
+  padding: 1px;
+  color: #494949;
+  border-radius: 5px;
+}
+
+body {
+  background-color: ghostwhite;
+}
+
+main {
+  margin: 0;
+}
+
+.header {
+  background-color: white;
+}
+
+.hero {
+  white-space: nowrap;
+  background: #fffdf6;
+}
+
+.menue {
+  flex: 1;
+  background: #fffdf6;
+  white-space: nowrap;
+  /* min-width: 300px; */
+  transition: all 0.5s;
+  /* for safari drink-filter-bar sticky (?) */
+  position: relative;
+}
+
+drink-filter-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  white-space: normal;
+}
+
+.sticky-content {
+  padding: 10px 2px 0 2px;
+  background: #fffdf6;
+}
+
+.sticky-shadow {
+  height: 5px;
+  width: 100%;
+  background-color: #fffdf6;
+  background: -moz-linear-gradient(top, #fffdf6 0%, transparent 100%); /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(top, #fffdf6 0%, transparent 100%);
+  background: linear-gradient(to bottom, #fffdf6 0%, transparent 100%);
+}
+
+.cart {
+  flex: 0 1 340px;
+  background: #ece8d9;
+  white-space: nowrap;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
+.flex-hide {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  flex: 0 1 0px;
+}
+
+.flex-overflow-unhide {
+  overflow: unset;
+}
+
+.cart-inner {
+  display: block;
+  min-width: 340px;
+  min-height: 340px;
+}
+
+.footer {
+  background: #faf6e9;
+}
+
+@media screen and (min-width: 640px) {
+  .flex-container {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.wrapper {
+  margin: auto;
+  max-width: 75rem;
+}

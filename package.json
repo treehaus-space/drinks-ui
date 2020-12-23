@@ -1,0 +1,57 @@
+{
+  "name": "drinks",
+  "version": "1.0.0",
+  "description": "drink ordering app",
+  "private": true,
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch --config webpack.config.js",
+    "build": "npx webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/treehaus-space/jonas/drinks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/treehaus-space/jonas/drinks/issues"
+  },
+  "homepage": "https://gitlab.com/treehaus-space/jonas/drinks#readme",
+  "devDependencies": {
+    "@types/lodash": "^4.14.159",
+    "@types/luxon": "^1.24.3",
+    "@types/redux": "^3.6.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "css-loader": "^4.2.1",
+    "file-loader": "^6.0.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "source-map-loader": "^1.0.1",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "haunted": "^4.7.0",
+    "immer": "^7.0.7",
+    "lit-html": "^1.2.1",
+    "lodash": "^4.17.20",
+    "luxon": "^1.24.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,yml,yaml,html,css,md}": "prettier --write"
+  }
+}

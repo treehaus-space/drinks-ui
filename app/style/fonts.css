@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Title';
+  src: url('../fonts/ReenieBeanie-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Header';
+  src: url('../fonts/AmaticSC-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Content';
+  src: url('../fonts/Kalam-Regular.ttf');
+}

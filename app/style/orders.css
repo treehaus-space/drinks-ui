@@ -1,0 +1,153 @@
+* {
+  font-family: 'Content', serif;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+html {
+  display: flex;
+  height: 100%;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0;
+}
+
+body > h1 {
+  font-family: Title, cursive;
+  font-size: 4rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.menu {
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+ol.orders {
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-around;
+  background-color: lavender;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+ol.orders > li {
+  counter-increment: my-awesome-counter;
+  position: relative;
+  min-height: 200px;
+  float: left;
+  margin: 20px 20px;
+  width: 300px;
+  padding: 25px 15px;
+  background: #fefabc linear-gradient(150deg, #efec88 0%, #fefabc 100%);
+  border: 1px solid #cccccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+ol.orders > li > h2,
+ol.orders > li > p {
+  text-align: center;
+  line-height: 1em;
+  font-weight: bold;
+}
+
+ol.orders > li > h2 {
+  font-size: 1.4em;
+  margin: 0.25em 0;
+  font-family: Header, cursive;
+}
+
+ol.orders > li > p {
+  text-align: start;
+  font-family: Content, cursive;
+  font-size: 1.1em;
+  margin: 0.5em 0;
+}
+
+ol.orders > li::before {
+  content: counter(my-awesome-counter);
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  --size: 32px;
+  left: calc(-1 * var(--size) + 15px);
+  line-height: calc(var(--size) + 4px);
+  width: var(--size);
+  height: var(--size);
+  top: -15px;
+  transform: rotate(-10deg);
+  background: #ff0000 radial-gradient(at 8px 8px, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5));
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.5);
+}
+
+.order-age {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+
+.fade-out {
+  animation: fade-out 0.5s ease-in;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes fade-out {
+  85% {
+    opacity: 1;
+    -webkit-transform: scale(1.12);
+  }
+  100% {
+    -webkit-transform: scale(0.1);
+    opacity: 0;
+  }
+}
+
+#blocker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.733);
+  z-index: 999999;
+  display: none;
+}
+
+#blocker::before {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  content: 'Netzwerkfehler 😞';
+  position: absolute;
+  white-space: pre;
+  display: inline;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -25px);
+}
+
+.attendant-display {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
