@@ -9,6 +9,6 @@
     "noImplicitAny": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["./app/static/**/*"],
+  "include": ["./app/**/*"],
   "exclude": ["node_modules"]
 }
