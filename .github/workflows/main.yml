@@ -32,7 +32,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ghcr.io/treehaus-space/drinks-ui:latest
-            ghcr.io/treehaus-space/drinks-ui:build-${{ steps.get_short_sha.outputs.sha_short }}
+            ghcr.io/treehaus-space/drinks-ui/drinks-ui:latest
+            ghcr.io/treehaus-space/drinks-ui/drinks-ui:build-${{ steps.get_short_sha.outputs.sha_short }}
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
