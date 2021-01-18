@@ -287,7 +287,7 @@ class SnackbarTimer {
   }
 
   finishTimeout() {
-    return setTimeout(() => {
+    return window.setTimeout(() => {
       deleteOrder(this.orderLi);
       this.snackbar.remove();
     }, this.remaining);

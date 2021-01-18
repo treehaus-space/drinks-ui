@@ -25,7 +25,7 @@ export const createTapper = (
 
   const prolongTimeout = () => {
     clearTimeout(timeout);
-    timeout = setTimeout(reset, beat ? beat * 12 : resetTimeout);
+    timeout = window.setTimeout(reset, beat ? beat * 12 : resetTimeout);
   };
 
   const isTimeNearBeat = (time: { getTime: () => number }, beatTime: Date, hit: number) => {
